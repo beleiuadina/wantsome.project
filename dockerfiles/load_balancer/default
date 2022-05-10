@@ -1,0 +1,15 @@
+upstream wordpress {
+    server 192.168.56.12;
+    server 192.168.56.13;
+}
+
+server {
+    listen 80;
+
+    server_name _;
+
+    location / {
+        proxy_pass http://wordpress;
+    }
+
+}
