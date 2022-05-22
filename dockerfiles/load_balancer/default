@@ -1,6 +1,5 @@
 upstream wordpress {
-    server 192.168.56.12;
-    server 192.168.56.13;
+    server host.docker.internal:8100;
 }
 
 server {
